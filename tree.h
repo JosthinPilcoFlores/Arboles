@@ -6,5 +6,7 @@ struct node {
   struct node* right;
 };
 struct node* newNode(int data);
-void struct node* build123();
+struct node* insert(struct node* node, int data);
+struct node* build123();
+int size(struct node* node);
 #endif
