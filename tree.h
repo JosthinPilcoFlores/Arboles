@@ -9,4 +9,9 @@ struct node* newNode(int data);
 struct node* insert(struct node* node, int data);
 struct node* build123();
 int size(struct node* node);
+int maxDepth(struct node* node);
+int minValue(struct node* node);
+void printTree(struct node* node);
+void printPostorder(struct node* node);
+int hasPathSum(struct node* node, int sum);
 #endif
