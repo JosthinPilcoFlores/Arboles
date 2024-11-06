@@ -14,4 +14,5 @@ int minValue(struct node* node);
 void printTree(struct node* node);
 void printPostorder(struct node* node);
 int hasPathSum(struct node* node, int sum);
+void printPaths(struct node* node);
 #endif

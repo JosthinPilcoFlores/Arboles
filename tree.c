@@ -99,3 +99,28 @@ int hasPathSum(struct node* node, int sum){
   //return hasPathSum(node->left,sum == node->data);
   return hasPathSum(node->left, sum - node->data) || hasPathSum(node->right, sum - node->data);
 }
+
+void printArray(int path[],int size){
+  for(int i=0; i<size; i++)
+    printf("%d, ", path[i]);
+  printf("\n");
+}
+
+void printPathsRecur(struct node* node, int path[], int pathLen){
+  if(node == NULL)
+    return;
+  else{
+    path[pathLen] = node->data;
+    else if(node && !node->left && !node->right)
+      printArray(path,path);
+    else if(node){
+      printPathsRecur(node->left, path, pathLen);
+      printPathsRecur(node->right, path, pathLen);
+    }
+  }
+}
+void print Paths(struct node* node){
+  int len = 100; //TODO lenght(node);
+  int* argv = malloc(sizeof(int)*len);
+  printPathsRecur(node,argv,0);
+}
