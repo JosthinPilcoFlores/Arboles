@@ -111,15 +111,15 @@ void printPathsRecur(struct node* node, int path[], int pathLen){
     return;
   else{
     path[pathLen] = node->data;
-    else if(node && !node->left && !node->right)
-      printArray(path,path);
+    if(node && !node->left && !node->right)
+      printArray(path,pathLen);
     else if(node){
       printPathsRecur(node->left, path, pathLen);
       printPathsRecur(node->right, path, pathLen);
     }
   }
 }
-void print Paths(struct node* node){
+void printPaths(struct node* node){
   int len = 100; //TODO lenght(node);
   int* argv = malloc(sizeof(int)*len);
   printPathsRecur(node,argv,0);
